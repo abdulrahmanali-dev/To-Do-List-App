@@ -5,60 +5,67 @@
   margin: 0;
   box-sizing: border-box;
 }
+*:focus {
+  outline: none;
+}
 body {
-  background-color: #e1e3ea;
+  font-family: sans-serif;
 }
 .title {
   text-align: center;
   font-family: "Rajdhani", sans-serif;
   font-weight: bold;
-  margin: 10px;
+  font-size: 40px;
+  padding: 20px;
 }
-
-.container {
-  padding-top: 50px;
-  font-family: sans-serif;
+.to-do {
+  height: 97vh;
+  display: flex;
 }
 .app {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  border: solid;
   background-color: #ccc;
+  width: 400px;
+  height: 600px;
+  margin: auto;
 }
 
 form {
-  display: flex;
+  width: 100%;
+  padding: 20px;
 }
 .input {
   border: none;
   background-color: #dadbdb;
+  width: 300px;
+  height: 35px;
+  padding: 10px;
 }
 
-.add {
-  display: flex;
-  opacity: 0.6;
-  background-color: red;
+.to-do .input:focus {
+  border: solid 1px #f44336;
+}
+.to-do .add {
+  background-color: #f44336;
   color: white;
-  font-size: 13px;
-  text-align: center;
-  align-items: center;
+  /* font-size: 35px; */
   padding: 10px;
-  height: 22px;
+  border: none;
+  height: 35px;
+  width: 40px;
   cursor: pointer;
 }
 
 .tasks {
-  background-color: #eee;
-  border-radius: 5px;
-  width: 400px;
+  /* background-color: #eee; */
   min-height: 30px;
-  margin-top: 30px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .task {
+  border: solid #f44336 3px;
   background-color: white;
   width: 300px;
   padding: 5px;
@@ -74,15 +81,29 @@ form {
 }
 
 .task span i {
-    width: 10px;
-    height: 10px;
-    float: right;
-    cursor: pointer;
-    background-color: red;
+  float: right;
+  padding: 0 3px ;
+  font-style: normal;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .app {
     width: 90%;
   }
+}
+.add-more {
+text-align: center;
+}
+.prpl {
+  color: rgb(98, 0, 255);
+  font-weight: bold;
+}
+a {
+  font-weight: bold;
+  color: rgb(98, 0, 255)
+}
+.createdBy {
+  padding-bottom: 2px ;
+  text-align: center;
 }

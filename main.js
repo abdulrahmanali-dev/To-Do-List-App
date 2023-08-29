@@ -1,12 +1,13 @@
+// Select Elements
 let input = document.querySelector(".input");
 let submit = document.querySelector(".add");
 let tasks = document.querySelector(".tasks");
 let delB = document.querySelector(".del");
 let arrayOfTasks = [];
 
-// check if there is tasks in local Storage
+// Check If There Is Tasks In Local Storage
 if (window.localStorage.getItem("tasks")) {
-  arrayOfTasks = JSON.parse(window.localStorage.getItem("tasks"));
+  arrayOfTasks[0] = JSON.parse(window.localStorage.getItem("tasks"));
 }
 
 getDataFromLocalStorage();
@@ -66,8 +67,8 @@ function addElementsToPageFrom(arrayOfTasks) {
     let span = document.createElement("span");
     span.className = "del";
     div.appendChild(span);
-    let myI  = document.createElement("i")
-    myI.className = "fa fa-trash"
+    let myI = document.createElement("i");
+  myI.innerHTML='X'
     span.appendChild(myI);
     // append to tasks div
     tasks.appendChild(div);
